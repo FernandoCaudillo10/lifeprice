@@ -1,0 +1,82 @@
+[04-May-2019 06:24:48 UTC] PHP Warning:  include(getDbconnect.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 3
+[04-May-2019 06:24:48 UTC] PHP Stack trace:
+[04-May-2019 06:24:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 06:24:48 UTC] PHP Warning:  include(): Failed opening 'getDbconnect.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 3
+[04-May-2019 06:24:48 UTC] PHP Stack trace:
+[04-May-2019 06:24:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 06:24:48 UTC] PHP Fatal error:  Call to undefined function getDataBaseConnection() in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 15
+[04-May-2019 06:24:48 UTC] PHP Stack trace:
+[04-May-2019 06:24:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 07:45:24 UTC] PHP Warning:  include(getDbconnect.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 3
+[04-May-2019 07:45:24 UTC] PHP Stack trace:
+[04-May-2019 07:45:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 07:45:24 UTC] PHP Warning:  include(): Failed opening 'getDbconnect.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 3
+[04-May-2019 07:45:24 UTC] PHP Stack trace:
+[04-May-2019 07:45:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 07:45:24 UTC] PHP Fatal error:  Call to undefined function getDataBaseConnection() in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 6
+[04-May-2019 07:45:24 UTC] PHP Stack trace:
+[04-May-2019 07:45:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 07:48:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: parameter was not defined' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php:38
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/includesphp/sign.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 38
+[04-May-2019 07:49:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'email' cannot be null' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php:38
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/includesphp/sign.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 38
+[04-May-2019 07:49:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'email' cannot be null' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php:38
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/includesphp/sign.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 38
+[04-May-2019 07:54:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'email' cannot be null' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php:38
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/includesphp/sign.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 38
+[04-May-2019 07:55:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/includesphp/sign.php(39): PDOStatement->fetch()
+#1 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 39
+[04-May-2019 07:56:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php:40
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/includesphp/sign.php(40): PDOStatement->fetchAll(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 40
+[04-May-2019 08:07:42 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 41
+[04-May-2019 08:19:48 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 19
+[04-May-2019 08:19:48 UTC] PHP Stack trace:
+[04-May-2019 08:19:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 08:19:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:19
+[04-May-2019 08:19:48 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 20
+[04-May-2019 08:19:48 UTC] PHP Stack trace:
+[04-May-2019 08:19:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 08:19:48 UTC] PHP   2. mysql_num_rows() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:20
+[04-May-2019 08:21:31 UTC] PHP Warning:  mysql_query() expects parameter 2 to be resource, object given in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 19
+[04-May-2019 08:21:31 UTC] PHP Stack trace:
+[04-May-2019 08:21:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 08:21:31 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:19
+[04-May-2019 08:21:31 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 20
+[04-May-2019 08:21:31 UTC] PHP Stack trace:
+[04-May-2019 08:21:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 08:21:31 UTC] PHP   2. mysql_num_rows() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:20
+[04-May-2019 08:23:47 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/lifeprice/includesphp/sign.php on line 20
+[04-May-2019 08:23:47 UTC] PHP Stack trace:
+[04-May-2019 08:23:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:0
+[04-May-2019 08:23:47 UTC] PHP   2. mysql_num_rows() /home/ubuntu/workspace/lifeprice/includesphp/sign.php:20
+[04-May-2019 09:15:58 UTC] PHP Warning:  password_hash() expects parameter 3 to be array, null given in /home/ubuntu/workspace/lifeprice/includesphp/login.php on line 11
+[04-May-2019 09:15:58 UTC] PHP Stack trace:
+[04-May-2019 09:15:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/login.php:0
+[04-May-2019 09:15:58 UTC] PHP   2. password_hash() /home/ubuntu/workspace/lifeprice/includesphp/login.php:11
+[04-May-2019 09:15:58 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/includesphp/login.php on line 17
+[04-May-2019 09:15:58 UTC] PHP Stack trace:
+[04-May-2019 09:15:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/login.php:0
+[04-May-2019 09:16:45 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/includesphp/login.php on line 22
+[04-May-2019 09:16:45 UTC] PHP Stack trace:
+[04-May-2019 09:16:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/login.php:0
+[04-May-2019 09:25:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/includesphp/login.php on line 21
+[04-May-2019 09:25:46 UTC] PHP Stack trace:
+[04-May-2019 09:25:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/includesphp/login.php:0
