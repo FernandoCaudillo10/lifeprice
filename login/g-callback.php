@@ -30,7 +30,7 @@
     $_SESSION['givenName'] = $userData['givenName'];
      
     //relocate
-    header('Location: index.php'); 
+    header('Location: index.html'); 
     exit();
 
 ?>
