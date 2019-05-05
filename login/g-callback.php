@@ -10,7 +10,7 @@
         $_SESSION['access_token'] = $token;
     }else{
         //relocate
-        header('Location: login.php'); 
+        header('Location: login/login.php'); 
         exit();
 
     }
@@ -30,7 +30,7 @@
     $_SESSION['givenName'] = $userData['givenName'];
      
     //relocate
-    header('Location: index.html'); 
+    header('Location: ../index.html'); 
     exit();
 
 ?>
