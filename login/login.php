@@ -1,7 +1,7 @@
 <?php 
     require_once "config.php";
        if(isset($_SESSION['access_token'])){
-        header('Location: index.php');
+        header('Location: index.html');
     }
 
     $loginURL = $gClient->createAuthUrl();
