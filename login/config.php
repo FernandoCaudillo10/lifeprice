@@ -8,7 +8,7 @@
     $gClient->setClientId("611897826857-lqmhtgq853bpgom887bjpcidqkjo494v.apps.googleusercontent.com");
     $gClient->setClientSecret("L5hirdDAqGkSaOpDRFDJ4E6R");
     $gClient->setApplicationName("DR Login");
-    $gClient->setRedirectUri("https://final-project-giocerna.c9users.io/g-callback.php");
+   $gClient->setRedirectUri("https://lifeprice.herokuapp.com/g-callback.php");
     $gClient->addScope("https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email");
     
 
