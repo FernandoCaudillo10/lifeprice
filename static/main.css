@@ -1,0 +1,42 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+body {
+    margin: 0 0 100px;
+    /* bottom = footer height */
+    padding: 25px;
+}
+#pageMenu{
+    display: flex;
+}
+.pageMenuItem{
+    padding: 1em;
+    margin: .5em;
+}
+.pageMenuItem:hover{
+  background-color: grey;
+}
+.removeLinkDecor{
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    overflow: hidden;
+}
