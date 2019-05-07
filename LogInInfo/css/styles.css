@@ -1,0 +1,9 @@
+.menu{
+    
+}
+
+.signInArea{
+    display: flex;
+    flex-direction:row;
+    color:blue;
+}
