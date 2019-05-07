@@ -9,17 +9,20 @@
 <html>
     <head>
         <title>LifePrice</title>
+        <style rel="stylesheet" href="css/styles.css"></style>
     </head>
 <body>
     
-    <div>
-        <form action="includesphp/login.php" method="post">
-          Username: <input type="text" name="email" placeholder="enter email"/> <br />
+    
+    <div class="menu">
+        <form class="signinArea" action="includesphp/login.php" method="post">
+          Username: <input type="text" name="email" placeholder="enter email"/> 
           Password: <input type="password" name="password" placeholder="enter password" />
           <button name="signIn">Sign in</button>
+          <a href="signup.php">Sign Up</a>
         </form>
         
-        <a href="signup.php">Sign Up</a>
+        
         
         <form action="includesphp/logOut.php" method="post">
            <button name="logOut">logout</button>
