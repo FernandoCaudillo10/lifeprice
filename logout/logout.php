@@ -1,5 +1,5 @@
 <?php 
-    require_once "config.php";
+    require_once "../login/config.php";
     unset($_SESSION['access_token']);
     $gClient->revokeToken();
     session_destroy();
