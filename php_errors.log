@@ -4,3 +4,105 @@ Stack trace:
 #1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
 #2 {main}
   thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:00:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:00:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:00:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:02:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:04:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:04:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:08:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:18:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:19:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:22:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:22:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:22:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:22:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:22:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:28:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:29:02 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[08-May-2019 21:29:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
