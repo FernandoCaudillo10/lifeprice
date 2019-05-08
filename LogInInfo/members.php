@@ -25,9 +25,9 @@
         <main>
             <style type="text/css">
                 .doc{
-                    color: #fff !important;
+                    color: #FFF !important;
                     text-transform: uppercase;
-                    background: #60a3bc;
+                    background: #990000;
                     padding: 20px;
                     border-radius: 50px;
                     display: inline-block;
@@ -35,8 +35,8 @@
                 }
                 .doc:hover {
                     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-                    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-                    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                    -webkit-box-shadow: 0px 5px 40px -10px rgba(219, 10, 91, 1);
+                    -moz-box-shadow: 0px 5px 40px -10px rgba(219, 10, 91, 1);
                     transition: all 0.4s ease 0s;
                 }
             </style>
