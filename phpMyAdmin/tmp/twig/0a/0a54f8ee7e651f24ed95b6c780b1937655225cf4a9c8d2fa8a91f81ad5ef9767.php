@@ -121,6 +121,6 @@ class __TwigTemplate_90dcf28a7356d3587b966d755a9e0fbee0e5ce28db60e1d51303888d211
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "list/item.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/list/item.twig");
+        return new Twig_Source("", "list/item.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/list/item.twig");
     }
 }

@@ -73,6 +73,6 @@ class __TwigTemplate_dc3666d12b18d94b516ba0e2a0df7d071d2ad81dd02fcb82c900a3b4056
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "navigation/logo.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/navigation/logo.twig");
+        return new Twig_Source("", "navigation/logo.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/navigation/logo.twig");
     }
 }
