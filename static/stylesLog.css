@@ -41,7 +41,11 @@ footer {
     overflow: hidden;
 }
 .menu{
-    position: fixed;
+    display: flex;
+    flex-direction:column;
     text-align:center;
-    display: inline-block;
 }
+h1{
+ text-align:center;   
+}
+
