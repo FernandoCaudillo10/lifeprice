@@ -1,5 +1,5 @@
 <?php
-    include "../dbConnec.php";
+    require_once('../../enpoints/dbConn.php');
     
     $conn = getConnection("LifePriceDb");
     $city = $_GET["city"];

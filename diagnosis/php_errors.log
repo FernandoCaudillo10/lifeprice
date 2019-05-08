@@ -266,3 +266,15 @@ Stack trace:
 #2 {main}
   thrown in /home/ubuntu/workspace/lifeprice/diagnosis/dbConnec.php on line 8
 >>>>>>> 5db3e5e4cbbf0d7eae76919e75fbe9e728c90269
+[08-May-2019 22:52:54 UTC] PHP Warning:  require_once(../../enpoints/dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 2
+[08-May-2019 22:52:54 UTC] PHP Stack trace:
+[08-May-2019 22:52:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:0
+[08-May-2019 22:52:54 UTC] PHP Fatal error:  require_once(): Failed opening required '../../enpoints/dbConn.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 2
+[08-May-2019 22:52:54 UTC] PHP Stack trace:
+[08-May-2019 22:52:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:0
+[08-May-2019 22:52:55 UTC] PHP Warning:  require_once(../../enpoints/dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 2
+[08-May-2019 22:52:55 UTC] PHP Stack trace:
+[08-May-2019 22:52:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:0
+[08-May-2019 22:52:55 UTC] PHP Fatal error:  require_once(): Failed opening required '../../enpoints/dbConn.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 2
+[08-May-2019 22:52:55 UTC] PHP Stack trace:
+[08-May-2019 22:52:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:0
