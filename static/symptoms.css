@@ -25,6 +25,11 @@ body {
     /* bottom = footer height */
     padding: 25px;
 }
+#symptomsMap {
+  margin-top: 5em;
+  height: 25em;
+  width: 100%;
+}
 
 footer {
     display: flex;
