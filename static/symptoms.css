@@ -30,7 +30,19 @@ body {
   height: 25em;
   width: 100%;
 }
-
+#bubbleContainer{
+    display: flex;
+}
+.bRed{
+  color: red;
+}
+.bubble{
+    margin: .2em;
+    border-radius: 45%;
+    padding: .1em .5em;
+    background-color: grey;
+    color: white;
+}
 footer {
     display: flex;
     flex-direction: column;
@@ -62,7 +74,7 @@ footer {
   width: 100%;
 }
 .autocompleteSubmit{
-  background-color: DodgerBlue;
+  background-color: #00b5cc;
   color: #fff;
 }
 .autocomplete-items {
@@ -90,4 +102,19 @@ footer {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important; 
   color: #ffffff; 
+}
+#symptomsSubmit{
+  color: #FFF !important;
+  text-transform: uppercase;
+  background: #60a3bc;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+}
+#symptomsSubmit:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 181, 204, 1);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 181, 204, 1);
+  transition: all 0.4s ease 0s;
 }

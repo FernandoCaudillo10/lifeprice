@@ -1,5 +1,6 @@
 <?php
-include "../getDbconnect.php";
+
+include "./LogInInfo/getDbconnect.php";
 if(isset($_POST["signIn"])){
     $conn = getDataBaseConnection("lifePriceData");
     $username = $_POST["email"];
@@ -22,17 +23,21 @@ if(isset($_POST["signIn"])){
     $stmt = $conn->prepare($sql);
     $stmt->execute(array (":username" => $username));
     $record = $stmt->fetch();
-    
     $isAuthenticated = password_verify($password, $record["password"]);
 
+
+    $use = json_encode($record);
+    
+    $someArray = json_decode($use, true);
     
     if($isAuthenticated){
-        $_SESSION['username'] = $record['username'];
-        header("Location: ../members.php?succezs=logged");
+        $_SESSION['username'] = $someArray[1];
+        header("Location: ./LogInInfo/members.php?succezs=logged");
         exit();
     }
     else{
-        header("Location: ../index.php?error=failedLogin");
+        header("Location: ./LogInInfo/index.php?error=failedLogin");
+        session_destroy();
         exit();
     }
 }

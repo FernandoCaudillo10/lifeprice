@@ -6,7 +6,7 @@
     $sql ="SELECT * FROM symptoms";
    
     $stmt = $db->prepare($sql);
-    $stmt->execute( array (":name" => $val));
+    $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     echo json_encode($records);

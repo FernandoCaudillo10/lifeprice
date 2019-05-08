@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,20 +11,46 @@
     <body>
         <header>
             <div id="pageTitle">
-                <a href="/" class="removeLinkDecor"><h1>LifePrice</h1></a>
+                <a href="index.php" class="removeLinkDecor"><h1>LifePrice</h1></a>
             </div>
         
             <div id="pageMenu">
-               <a href="./symptoms/index.html" class="pageMenuItem removeLinkDecor"> <div>Symptoms</div></a>
-                <a href="./diagnosis/index.html" class="pageMenuItem removeLinkDecor"><div>Diagnostics</div></a>
+                <a href="./symptoms/index.php" class="pageMenuItem removeLinkDecor"> <div>Symptoms</div></a>
+                <a href="./diagnosis/index.php" class="pageMenuItem removeLinkDecor"><div>Diagnostics</div></a>
                 <a href="./LogInInfo/index.php" class="pageMenuItem removeLinkDecor"><div>Customer - Log In</div></a>
-                 <a href="./login/login.php" class="pageMenuItem removeLinkDecor"><div>Doctor - Log In</div></a>
+                <a href="./login/login.php" class="pageMenuItem removeLinkDecor"><div>Doctor - Log In</div></a>
             </div>
             
         </header>
-        <main>
-            
-        </main>
+        <!--<div class="main">-->
+        <!--    <a href="./diagnosis/index.html"><img class="image" src="images/fracture-bone.png" width="22.3%"></img></a>-->
+        <!--    <a href="./symptoms/index.html"><img class="image" src="images/capsule.png" width="20%"></img></a>-->
+        <!--</div>-->
+    <div class="carousel">
+    	<figure>
+            <a href="./symptoms/index.html"><img  alt="" src="images/fracture-bone.png" width="22.3%"></a>
+            <a href="./symptoms/index.html"><img  alt="" src="images/user.png" width="40%"></a>
+            <a href="./diagnosis/index.html"><img  alt="" src="images/doctor.png" width="19%"></a>
+            <a href="./diagnosis/index.html"><img  alt="" src="images/capsule.png" width="20%"></a>
+            <a href="./symptoms/index.html"><img  alt="" src="images/fracture-bone.png" width="22.3%"></a>
+            <a href="./symptoms/index.html"><img  alt="" src="images/user.png" width="40%"></a>
+            <a href="./symptoms/index.html"><img  alt="" src="images/doctor.png" width="19%"></a>
+            <a href="./diagnosis/index.html"><img  alt="" src="images/capsule.png" width="20%"></a>
+    	</figure>
+    	<nav>
+    		<button  class="nav prev">Prev</button>
+    		<button  class="nav next">Next</button>
+    	</nav>
+    </div>
+    <div class="description">
+        <p>
+        This website has two main fucntions.<br>
+        One is to help user find a doctor.<br>
+        The other is to help the user figure out the prices<br>
+        of treatment.
+        </p>
+    </div>
+    <script type="text/javascript" src="js/caru.js"></script>
         <footer class="footer">
             <div>LifePrice &copy; 2019</div>
             <div>F. Caudillo | C. Aldrete | G. Cerna | A. Gonzalez</div>
