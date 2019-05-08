@@ -1,8 +1,7 @@
 let suggestions = [];
-let lat;
-let lang;
+
 $(document).ready(() =>{
-    getLocation();
+
     $.ajax({
         type:"GET",
         url:"https://sandbox-healthservice.priaid.ch/symptoms",
@@ -142,9 +141,11 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    lat = position.coords.latitude;
-    lang = position.coords.longitude; 
-    console.log(lat, lang);
+    let map = new google.maps.Map(document.getElementById('symptomsMap'), {
+        center: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)},
+        zoom: 15
+      });
+    let marker = new google.maps.Marker({position: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}, map: map});
 }
 function showError(error) {
     console.log("Error:");
