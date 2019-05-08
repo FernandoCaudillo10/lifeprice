@@ -1,5 +1,5 @@
 <?php
-    require_once('../../enpoints/dbConn.php');
+    require_once('../../endpoints/dbConn.php');
     
     $db = getConnection();
     
