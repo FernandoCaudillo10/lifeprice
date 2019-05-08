@@ -19,46 +19,52 @@ function showPosition(position) {
         zoom: 8
     });
     
-    geocoder.geocode({'location': {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}}, async function(results, status) {
+    geocoder.geocode({'location': {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}}, function(results, status) {
         if (status === 'OK') {
             if (results[0]) {
-                let func = await setTimeout(function() 
-                        { 
-                            city = results[0].address_components[2].long_name;
-                            $.ajax({
-                                type:"GET",
-                                url:"../diagnosis/api/getDiagnosis.php",
-                                dataType:"json",
-                                data:{ "city": String(city), "diagnosis": "SEIZURE" },
-                                success: function (data,status){
-                                    console.log("hello");
-                                    console.log(data);
-                                    data.forEach(function(elem){
-                                        console.log(elem.address);
-                                        geocoder.geocode({'address': elem.address + ", " + city}, function(results, status) {
-                                            if (status === 'OK') {
-                                                var marker = new google.maps.Marker({
-                                                    map: map,
-                                                    position: results[0].geometry.location
-                                                });
-                                            } else {
-                                                alert('Geocode was not successful for the following reason: ' + status);
-                                            }
-                                        });
+                city = results[0].address_components[2].long_name;
+                $.ajax({
+                    type:"GET",
+                    url:"../diagnosis/api/getDiagnosis.php",
+                    dataType:"json",
+                    data:{ "city": String(city), "diagnosis": "SEIZURE" },
+                    success: function (data,status){
+                        console.log("hello");
+                        console.log(data);
+                        data.forEach(function(elem){
+                            console.log(elem.address);
+                            geocoder.geocode({'address': elem.address + ", " + city}, function(results, status) {
+                                if (status === 'OK') {
+                                    var infowindow = new google.maps.InfoWindow();
+                                
+                                    var marker = new google.maps.Marker({
+                                        map: map,
+                                        position: results[0].geometry.location
                                     });
-                                },
-                                error: function(error){
-                                    console.log(error);
-                                },
+                                    google.maps.event.addListener(marker, 'click', function() {
+                                      infowindow.setContent('<div><strong>Facility:</strong> ' + elem.facility + '<br>' +
+                                        '<strong>Address:</strong> ' + elem.address + '<br> <strong>Cost:</strong> $' + elem.cost + '</div>');
+                                      infowindow.open(map, this);
+                                    });
+                                } else {
+                                    alert('Geocode was not successful for the following reason: ' + status);
+                                }
                             });
-                        }, 10);
+                            
+                        });
+                    },
+                    error: function(error){
+                        console.log(error);
+                    },
+                });
+                
                 map.setZoom(10.5);
                 var marker = new google.maps.Marker({
                     position: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)} ,
                     map: map,
-                    label: "*"
+                    label: "^_^"
                 });
-                infowindow.setContent(results[0].formatted_address);
+                infowindow.setContent('<div><strong>Current Location: </strong>'+results[0].formatted_address+'</div>');
                 infowindow.open(map, marker);
             } else {
                 window.alert('No results found');
