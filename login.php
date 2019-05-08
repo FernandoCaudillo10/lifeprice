@@ -1,6 +1,6 @@
 <?php
-session_start();
-include "../getDbconnect.php";
+
+include "./LogInInfo/getDbconnect.php";
 if(isset($_POST["signIn"])){
     $conn = getDataBaseConnection("lifePriceData");
     $username = $_POST["email"];
@@ -9,7 +9,7 @@ if(isset($_POST["signIn"])){
         header("Location: ../index.php?error=emptyfields");
         exit();
     }
-    
+    session_start();
         $options = [
     'cost' => 11,
     //'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
@@ -32,11 +32,12 @@ if(isset($_POST["signIn"])){
     
     if($isAuthenticated){
         $_SESSION['username'] = $someArray[1];
-        header("Location: ../members.php?succezs=logged");
+        header("Location: ./LogInInfo/members.php?succezs=logged");
         exit();
     }
     else{
-        header("Location: ../index.php?error=failedLogin");
+        header("Location: ./LogInInfo/index.php?error=failedLogin");
+        session_destroy();
         exit();
     }
 }

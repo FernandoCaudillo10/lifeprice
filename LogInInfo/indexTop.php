@@ -1,9 +1,5 @@
 <?php
- session_start();
 
-// if (!isset($_SESSION['username'])){
-//   header("Location: index.php");
-// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +11,7 @@
     
     <h1>Log In</h1>
     <div class="menu">
-        <form class="signinArea" action="includesphp/login.php" method="post">
+        <form class="signinArea" action="../login.php" method="post">
           Username:<input type="text" name="email" placeholder="enter username"/> <br/><br/>
           Password:<input type="password" name="password" placeholder="enter password" /><br/><br/>
           <button class="sub" name="signIn">Sign in</button>

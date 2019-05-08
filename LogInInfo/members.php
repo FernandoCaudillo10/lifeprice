@@ -1,7 +1,6 @@
 <?php
 session_start();
 echo $_SESSION['username'];
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,12 +12,12 @@ echo $_SESSION['username'];
     <body>
         <header>
             <div id="pageTitle">
-                <a href="../index.html" class="removeLinkDecor"><h1>LifePrice</h1></a>
+                <a href="../index.php" class="removeLinkDecor"><h1>LifePrice</h1></a>
             </div>
         
             <div id="pageMenu">
-               <a href="../symptoms/index.html" class="pageMenuItem removeLinkDecor"> <div>Symptoms</div></a>
-                <a href="../diagnosis/index.html" class="pageMenuItem removeLinkDecor"><div>Diagnostics</div></a>
+               <a href="../symptoms/index.php" class="pageMenuItem removeLinkDecor"> <div>Symptoms</div></a>
+                <a href="../diagnosis/index.php" class="pageMenuItem removeLinkDecor"><div>Diagnostics</div></a>
                 <a href="../login/login.php" class="pageMenuItem removeLinkDecor"><div>Doctor - Log In</div></a>
                
                 <form action="includesphp/logOut.php" method="post">

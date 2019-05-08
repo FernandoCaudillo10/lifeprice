@@ -1,8 +1,8 @@
 <?php
-    // session_start();
+    session_start();
+    session_destroy();
     // echo $_SESSION['username'];
     include "index.html";
-
     require_once "config.php";
        if(isset($_SESSION['access_token'])){
         header('Location: ../index.html');

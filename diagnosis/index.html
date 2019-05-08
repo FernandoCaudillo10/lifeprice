@@ -1,9 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['username'])) {
-   echo "hi";
- } 
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,8 +12,8 @@ if (isset($_SESSION['username'])) {
             </div>
         
             <div id="pageMenu">
-               <a href="../symptoms/index.html" class="pageMenuItem removeLinkDecor"> <div>Symptoms</div></a>
-                <a href="index.html" class="pageMenuItem removeLinkDecor"><div>Diagnostics</div></a>
+               <a href="../symptoms/index.php" class="pageMenuItem removeLinkDecor"> <div>Symptoms</div></a>
+                <a href="index.php" class="pageMenuItem removeLinkDecor"><div>Diagnostics</div></a>
                 <a href="../LogInInfo/index.php" class="pageMenuItem removeLinkDecor"><div>Customer - Log In</div></a>
                 <a href="../login/login.php" class="pageMenuItem removeLinkDecor"><div>Doctor - Log In</div></a>
             </div>
