@@ -22,7 +22,10 @@ function showPosition(position) {
     geocoder.geocode({'location': {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}}, function(results, status) {
         if (status === 'OK') {
             if (results[0]) {
-                city = results[0].address_components[2].long_name;
+                console.log(results);
+                city = results[0].address_components[3].long_name;
+                console.log(city);
+                console.log(diag);
                 $.ajax({
                     type:"GET",
                     url:"../diagnosis/api/getDiagnosis.php",
@@ -31,7 +34,8 @@ function showPosition(position) {
                     success: function (data,status){
                         console.log("hello");
                         console.log(data);
-                        data.forEach(function(elem){
+                        let i=0;
+                        for(let elem of data){
                             console.log(elem.address);
                             geocoder.geocode({'address': elem.address + ", " + city}, function(results, status) {
                                 if (status === 'OK') {
@@ -50,8 +54,9 @@ function showPosition(position) {
                                     alert('Geocode was not successful for the following reason: ' + status);
                                 }
                             });
-                            
-                        });
+                            i++;
+                            if(i>9) break;
+                        }
                     },
                     error: function(error){
                         console.log(error);

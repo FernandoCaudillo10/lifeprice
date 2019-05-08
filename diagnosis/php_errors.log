@@ -37,3 +37,61 @@ Stack trace:
 #0 /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php(9): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 9
+[08-May-2019 20:20:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OUTER JOIN diagnosis_table as dt 
+            ON df.diag_id = dt.diag_id 
+      ' at line 3' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:27:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FULL JOIN diagnosis_table as dt 
+            ON df.diag_id = dt.diag_id 
+       ' at line 3' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:33:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'f
+            INNER JOIN facility_table as ft ON ft.name = f.facility) 
+        ' at line 4' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:33:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'f
+            INNER JOIN facility_table as ft ON ft.name = f.facility) 
+        ' at line 4' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:36:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'diag_id' in field list is ambiguous' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:36:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'diag_id' in field list is ambiguous' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:37:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'diagnosis_table.diag_id' in 'field list'' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:38:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'diagnosisToFacility.diag_id' in 'field list'' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 20:38:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'diagnosisToFacility.diag_id' in 'field list'' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 22:26:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'diagnosisToFacility.diag_id' in 'field list'' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15

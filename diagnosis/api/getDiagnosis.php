@@ -11,6 +11,7 @@
             ON df.diag_id = dt.diag_id 
             INNER JOIN facility_table as ft ON ft.name = df.facility 
             WHERE diagnosis LIKE "%'.$diagnosis.'%" AND region LIKE "%'.$city.'%"';
+            
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
