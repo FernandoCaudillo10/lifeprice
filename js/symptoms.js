@@ -1,37 +1,62 @@
 let suggestions = [];
-let lat;
-let lang;
+
 $(document).ready(() =>{
-    getLocation();
+    
+    //update db
+    // $.ajax({
+    //     type:"GET",
+    //     url: "https://healthservice.priaid.ch/symptoms?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImNlc2FyYWFsZHJldGVAc3R1ZGVudC5oYXJ0bmVsbC5lZHUiLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjIzNjciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ZlcnNpb24iOiIxMDgiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xpbWl0IjoiMTAwIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwIjoiQmFzaWMiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xhbmd1YWdlIjoiZW4tZ2IiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIyMDk5LTEyLTMxIiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwc3RhcnQiOiIyMDE5LTA0LTMwIiwiaXNzIjoiaHR0cHM6Ly9hdXRoc2VydmljZS5wcmlhaWQuY2giLCJhdWQiOiJodHRwczovL2hlYWx0aHNlcnZpY2UucHJpYWlkLmNoIiwiZXhwIjoxNTU3MzIzMzgzLCJuYmYiOjE1NTczMTYxODN9.yQwG-To2NHNjnGt11AjG5Su74fe8ngHNb81EgELPuqE&format=json&language=en-gb",
+    //     dataType:"json",
+    //     success: function (data,status){
+    //         data = Array.from(data);
+    //         data.forEach((elem) => suggestions.push(elem.Name));
+    //         autocomplete(document.getElementById("symptomsInput"), suggestions);
+            
+    //         data = data.map(elem => elem.Name);
+    //         data = Array.from(data);
+            
+    //         $.ajax({
+    //             type:"GET",
+    //             url:"../endpoints/createSymptomsTable.php",
+    //             dataType:"json",
+    //             data:{
+    //                 "data": data,
+    //             },
+    //             error: (error) =>{
+    //                 console.log(error);  
+    //             },
+    //         });
+    //     },
+    //     error: function(error){
+    //         console.log(error);
+    //     },
+    // });
+    
     $.ajax({
-        type:"GET",
-        url:"https://sandbox-healthservice.priaid.ch/symptoms",
-        dataType:"json",
-        data:{
-            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImNlc2FyYWFsZHJldGVAc3R1ZGVudC5oYXJ0bmVsbC5lZHUiLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjUwNTAiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ZlcnNpb24iOiIyMDAiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xpbWl0IjoiOTk5OTk5OTk5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwIjoiUHJlbWl1bSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGFuZ3VhZ2UiOiJlbi1nYiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvZXhwaXJhdGlvbiI6IjIwOTktMTItMzEiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXBzdGFydCI6IjIwMTktMDQtMzAiLCJpc3MiOiJodHRwczovL3NhbmRib3gtYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTU1Njk2NDg0NiwibmJmIjoxNTU2OTU3NjQ2fQ.088qLFrACFSj_-0idBY3XonzbTIUvjQIRfSaXaXRa0U",
-            "format": "json",
-            "language": "en-gb",
-        },
-        success: function (data,status){
-            data = Array.from(data);
-            data.forEach((elem) => suggestions.push(elem.Name));
+       type:"GET",
+       url: "../endpoints/getAllSymptoms.php",
+       dataType: "json",
+       success: (data) => {
+            data.forEach((elem) => suggestions.push(elem.name.toUpperCase()) );
             autocomplete(document.getElementById("symptomsInput"), suggestions);
-        },
-        error: function(error){
-            console.log(error);
-        },
+       },
     });
     
     $("#symptomsSubmit").click(() =>{
-       if( suggestions.includes( $("#symptomsInput").val() ) ){
-           suggestions.filter((elem)=>{elem == $("#symptomsInput").val() });
-       } 
+       if( suggestions.includes( $("#symptomsInput").val().toUpperCase() ) ){
+           createBubble($("#symptomsInput").val().toUpperCase());
+       }
        else{
-           
+           console.log("nope");
        }
     });
 });
 
+function createBubble(value){
+    $("#bubbleContainer").append("<div class='bubble' id='"+value+"'>"+value+" <strong class='bRed'>X</strong></div>").click(() => {
+        $("#"+value).remove();
+    });
+}
 
 function autocomplete(inp, arr) {
         /*the autocomplete function takes two arguments,
@@ -142,10 +167,69 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    lat = position.coords.latitude;
-    lang = position.coords.longitude; 
-    console.log(lat, lang);
+    var geocoder = new google.maps.Geocoder;
+    var infowindow = new google.maps.InfoWindow();
+    
+    let map = new google.maps.Map(document.getElementById('symptomsMap'), {
+        center: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)},
+        zoom: 15
+      });
+      geocoder.geocode({'location': {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}}, function(results, status) {
+        if (status === 'OK') {
+            if (results[0]) {
+                city = results[0].address_components[2].long_name;
+                $.ajax({
+                    type:"GET",
+                    url:"../diagnosis/api/getDiagnosis.php",
+                    dataType:"json",
+                    data:{ "city": "Salinas", "diagnosis": "SEIZURE" },
+                    success: function (data,status){
+                        console.log("hello");
+                        console.log(data);
+                        data.forEach(function(elem){
+                            console.log(elem.address);
+                            geocoder.geocode({'address': elem.address + ", " + city}, function(results, status) {
+                                if (status === 'OK') {
+                                    var infowindow = new google.maps.InfoWindow();
+                                
+                                    var marker = new google.maps.Marker({
+                                        map: map,
+                                        position: results[0].geometry.location
+                                    });
+                                    google.maps.event.addListener(marker, 'click', function() {
+                                      infowindow.setContent('<div><strong>Facility:</strong> ' + elem.facility + '<br>' +
+                                        '<strong>Address:</strong> ' + elem.address + '<br> <strong>Cost:</strong> $' + elem.cost + '</div>');
+                                      infowindow.open(map, this);
+                                    });
+                                } else {
+                                    alert('Geocode was not successful for the following reason: ' + status);
+                                }
+                            });
+                            
+                        });
+                    },
+                    error: function(error){
+                        console.log(error);
+                    },
+                });
+                
+                map.setZoom(10.5);
+                var marker = new google.maps.Marker({
+                    position: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)} ,
+                    map: map,
+                    label: "^_^"
+                });
+                infowindow.setContent('<div><strong>Current Location: </strong>'+results[0].formatted_address+'</div>');
+                infowindow.open(map, marker);
+            } else {
+                window.alert('No results found');
+            }
+        } else {
+            window.alert('Geocoder failed due to: ' + status);
+        }
+    });
 }
+
 function showError(error) {
     console.log("Error:");
     switch(error.code) {
@@ -161,5 +245,5 @@ function showError(error) {
         case error.UNKNOWN_ERROR:
           console.log("An unknown error occurred.");
           break;
-      }
+    }
 }

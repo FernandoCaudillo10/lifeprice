@@ -2,11 +2,15 @@
     include "../dbConnec.php";
     
     $conn = getConnection("LifePriceDb");
+    $city = $_GET["city"];
+    $diagnosis = $_GET["diagnosis"];
     
-    $sql = 'SELECT diagnosis_table.diagnosis, facility_table.name, 
-                facility_table.address, facility_table.region 
-            FROM diagnosis_table INNER JOIN facility_table 
-            ON diagnosis_table.diag_id = 101 AND facility_table.region LIKE "%San Diego%"';
+    $sql = 'SELECT diagnosis, facility, address, cost, region 
+            FROM diagnosisToFacility as df 
+            INNER JOIN diagnosis_table as dt 
+            ON df.diag_id = dt.diag_id 
+            INNER JOIN facility_table as ft ON ft.name = df.facility 
+            WHERE diagnosis LIKE "%'.$diagnosis.'%" AND region LIKE "%'.$city.'%"';
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);

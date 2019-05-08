@@ -1,0 +1,39 @@
+[08-May-2019 14:39:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'caldrete2'@'localhost' (using password: NO)' in /home/ubuntu/workspace/diagnosis/dbConnec.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/dbConnec.php(8): PDO->__construct('mysql:host=loca...', 'caldrete2', '')
+#1 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(4): getConnection('LifePriceDb')
+#2 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/dbConnec.php on line 8
+[08-May-2019 14:40:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'caldrete2'@'localhost' (using password: NO)' in /home/ubuntu/workspace/diagnosis/dbConnec.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/dbConnec.php(8): PDO->__construct('mysql:host=loca...', 'caldrete2', '')
+#1 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(4): getConnection('LifePriceDb')
+#2 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/dbConnec.php on line 8
+[08-May-2019 14:42:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'LifePriceDb.diagnosisToFacility' doesn't exist' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 14:43:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'LifePriceDb.diagnosisToFacility' doesn't exist' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 15
+[08-May-2019 14:57:40 UTC] PHP Warning:  require_once(../dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 2
+[08-May-2019 14:57:40 UTC] PHP Stack trace:
+[08-May-2019 14:57:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:0
+[08-May-2019 14:57:40 UTC] PHP Fatal error:  require_once(): Failed opening required '../dbConn.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 2
+[08-May-2019 14:57:40 UTC] PHP Stack trace:
+[08-May-2019 14:57:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:0
+[08-May-2019 15:02:28 UTC] PHP Warning:  require_once(../dbConnc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 2
+[08-May-2019 15:02:28 UTC] PHP Stack trace:
+[08-May-2019 15:02:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:0
+[08-May-2019 15:02:28 UTC] PHP Fatal error:  require_once(): Failed opening required '../dbConnc.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 2
+[08-May-2019 15:02:28 UTC] PHP Stack trace:
+[08-May-2019 15:02:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:0
+[08-May-2019 15:02:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'LifePriceDb.diagnosis' doesn't exist' in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php(9): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php on line 9
