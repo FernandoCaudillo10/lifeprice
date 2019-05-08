@@ -40,6 +40,6 @@ class __TwigTemplate_a81554b6afa6777128b0e5b4321cb88a2d47f4337fd55c16fd3d0cfccc5
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "login/footer.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/login/footer.twig");
+        return new Twig_Source("", "login/footer.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/login/footer.twig");
     }
 }
