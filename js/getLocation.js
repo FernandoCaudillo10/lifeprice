@@ -11,9 +11,8 @@ function getLocation() {
 
 function showPosition(position) {
     var geocoder = new google.maps.Geocoder;
-    var infowindow = new google.maps.InfoWindow;
-    var facilities = [];
-    
+    var infowindow = new google.maps.InfoWindow();
+    var SD = {lat: 32.715736, lng: -117.161087};
     let map = new google.maps.Map(document.getElementById('diagMap'), {
         center: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)},
         zoom: 8
@@ -27,7 +26,7 @@ function showPosition(position) {
                     type:"GET",
                     url:"../diagnosis/api/getDiagnosis.php",
                     dataType:"json",
-                    data:{ "city": String(city), "diagnosis": "SEIZURE" },
+                    data:{ "city": "Salinas", "diagnosis": "SEIZURE" },
                     success: function (data,status){
                         console.log("hello");
                         console.log(data);
