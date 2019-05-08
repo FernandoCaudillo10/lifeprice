@@ -23,9 +23,9 @@
         
         
         
-        <form action="includesphp/logOut.php" method="post">
-           <button name="logOut">logout</button>
-        </form>
+        <!--<form action="includesphp/logOut.php" method="post">-->
+        <!--   <button name="logOut">logout</button>-->
+        <!--</form>-->
     </div>    
 
     </body>
