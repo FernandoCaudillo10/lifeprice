@@ -95,6 +95,6 @@ class __TwigTemplate_a866be3515973ce6bb6911d6ee647f3191c777582d6345a304d2539fbde
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "list/unordered.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/list/unordered.twig");
+        return new Twig_Source("", "list/unordered.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/list/unordered.twig");
     }
 }

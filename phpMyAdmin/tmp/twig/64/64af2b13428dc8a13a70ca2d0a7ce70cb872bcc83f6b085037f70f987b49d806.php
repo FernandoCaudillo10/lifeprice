@@ -72,6 +72,6 @@ class __TwigTemplate_3fd0d9649e5974faf0ccb4bd80914c61e09cd1b389a4446dc949a9dcea8
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "login/header.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/login/header.twig");
+        return new Twig_Source("", "login/header.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/login/header.twig");
     }
 }

@@ -32,18 +32,15 @@ $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
-/**
- * heroku
- * mysql://b5a062ee6e80e5:66652dfb@us-cdbr-iron-east-02.cleardb.net/heroku_d6ddbeaeefbd244?reconnect=true
- * 
- */
+//mysql://b5beae26234c83:445b8ee7@us-cdbr-iron-east-02.cleardb.net/heroku_3e6f5f2815d5eed?reconnect=true
+
 $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'config';
 /* Server parameters */
 $cfg['Servers'][$i]['host'] = 'us-cdbr-iron-east-02.cleardb.net';
-$cfg['Servers'][$i]['user'] = 'b5a062ee6e80e5';
-$cfg['Servers'][$i]['password'] = '66652dfb';
+$cfg['Servers'][$i]['user'] = 'b5beae26234c83';
+$cfg['Servers'][$i]['password'] = '445b8ee7';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 /**
