@@ -1,9 +1,9 @@
 <?php
-    require_once('./dbConn.php');
+    require_once('../dbConnec.php');
     
     $db = getConnection();
     
-    $sql ="SELECT * FROM symptoms";
+    $sql ="SELECT diagnosis FROM diagnosis_table";
    
     $stmt = $db->prepare($sql);
     $stmt->execute();

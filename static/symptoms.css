@@ -30,7 +30,19 @@ body {
   height: 25em;
   width: 100%;
 }
-
+#bubbleContainer{
+    display: flex;
+}
+.bRed{
+  color: red;
+}
+.bubble{
+    margin: .2em;
+    border-radius: 45%;
+    padding: .1em .5em;
+    background-color: grey;
+    color: white;
+}
 footer {
     display: flex;
     flex-direction: column;

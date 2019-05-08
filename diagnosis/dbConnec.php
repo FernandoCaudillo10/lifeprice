@@ -1,7 +1,7 @@
 <?php
     function getConnection($dbname = 'LifePriceDb'){
         $host = "localhost";
-        $user = "caldrete2";
+        $user = "root";
         $pswrd = "";
         
         //creates connection

@@ -21,8 +21,8 @@
         </header>
         <main class="content">
             <div class="autocomplete">
-                <input id="symptomsInput" class="inputStyle autocompleteInput" type="text" name="symptoms" placeholder="Enter Diagnosis"/>
-                <button id="symptomsSubmit" class="inputStyle autocompleteSubmit" type="button">Add Symptom</button>
+                <input id="diagnosisInput" class="inputStyle autocompleteInput" type="text" name="diagnosis" placeholder="Enter Diagnosis"/>
+                <button id="diagnosisSubmit" class="inputStyle autocompleteSubmit" type="button">Add Symptom</button>
             </div>
             
             <div id=diagMap></div>
@@ -35,13 +35,15 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript" src="../js/getLocation.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK6FgtutsSg1mD4qiwNsSYxWzP_C-XQbg&callback=getLocation"
-    async defer></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK6FgtutsSg1mD4qiwNsSYxWzP_C-XQbg&libraries=places&callback=getLocation">
+    </script>
     
     <style type="text/css">
         #diagMap{
             margin-top: 5em;
-            height: 25em;
+            height: 30em;
             width: 100%;
         }
     </style>
