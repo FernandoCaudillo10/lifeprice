@@ -116,6 +116,6 @@ class __TwigTemplate_016800994199aab20d350f6f92f0b6d1213a7ac7eb1c88082e7e4056cca
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "select_lang.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/select_lang.twig");
+        return new Twig_Source("", "select_lang.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/select_lang.twig");
     }
 }

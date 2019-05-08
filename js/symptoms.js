@@ -1,6 +1,8 @@
 let suggestions = [];
+let lat;
+let lang;
 $(document).ready(() =>{
-    console.log("hello");
+    getLocation();
     $.ajax({
         type:"GET",
         url:"https://sandbox-healthservice.priaid.ch/symptoms",
@@ -129,4 +131,35 @@ function autocomplete(inp, arr) {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
+}
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    }
+    else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    lat = position.coords.latitude;
+    lang = position.coords.longitude; 
+    console.log(lat, lang);
+}
+function showError(error) {
+    console.log("Error:");
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+          console.log("User denied the request for Geolocation.");
+          break;
+        case error.POSITION_UNAVAILABLE:
+          console.log("Location information is unavailable.");
+          break;
+        case error.TIMEOUT:
+          console.log("The request to get user location timed out.");
+          break;
+        case error.UNKNOWN_ERROR:
+          console.log("An unknown error occurred.");
+          break;
+      }
 }

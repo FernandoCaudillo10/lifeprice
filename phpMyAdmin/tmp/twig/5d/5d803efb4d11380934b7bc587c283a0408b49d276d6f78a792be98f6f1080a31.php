@@ -40,6 +40,6 @@ class __TwigTemplate_16815a63c692adf2460aaf3093732aaadccade3aa7bf12b70ad84edf2c7
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "config/form_display/tabs_bottom.twig", "/home/ubuntu/workspace/phpMyAdmin/templates/config/form_display/tabs_bottom.twig");
+        return new Twig_Source("", "config/form_display/tabs_bottom.twig", "/home/ubuntu/workspace/lifeprice/phpMyAdmin/templates/config/form_display/tabs_bottom.twig");
     }
 }
