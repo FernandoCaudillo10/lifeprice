@@ -26,7 +26,7 @@ function showPosition(position) {
                     type:"GET",
                     url:"../diagnosis/api/getDiagnosis.php",
                     dataType:"json",
-                    data:{ "city": "Salinas", "diagnosis": "SEIZURE" },
+                    data:{ "city": "Salinas", "diagnosis": "KIDNEY" },
                     success: function (data,status){
                         console.log("hello");
                         console.log(data);
