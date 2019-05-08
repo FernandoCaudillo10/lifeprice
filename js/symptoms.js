@@ -37,21 +37,26 @@ $(document).ready(() =>{
        url: "../endpoints/getAllSymptoms.php",
        dataType: "json",
        success: (data) => {
-            data.forEach((elem) => suggestions.push(elem.name) );
+            data.forEach((elem) => suggestions.push(elem.name.toUpperCase()) );
             autocomplete(document.getElementById("symptomsInput"), suggestions);
        },
     });
     
     $("#symptomsSubmit").click(() =>{
-       if( suggestions.includes( $("#symptomsInput").val() ) ){
-           suggestions.filter((elem)=>{elem == $("#symptomsInput").val() });
-       } 
+       if( suggestions.includes( $("#symptomsInput").val().toUpperCase() ) ){
+           createBubble($("#symptomsInput").val().toUpperCase());
+       }
        else{
-           
+           console.log("nope");
        }
     });
 });
 
+function createBubble(value){
+    $("#bubbleContainer").append("<div class='bubble' id='"+value+"'>"+value+" <strong class='bRed'>X</strong></div>").click(() => {
+        $("#"+value).remove();
+    });
+}
 
 function autocomplete(inp, arr) {
         /*the autocomplete function takes two arguments,
