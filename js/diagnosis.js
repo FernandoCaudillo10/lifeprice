@@ -1,5 +1,6 @@
 let suggestions = [];
 
+
 $(document).ready(() =>{
     $.ajax({
         type:"GET",
@@ -15,11 +16,12 @@ $(document).ready(() =>{
     });
     
     $("#diagnosisSubmit").click(() =>{
-       if( suggestions.includes( $("#diagnosisInput").val() ) ){
-           suggestions.filter((elem)=>{elem == $("#diagnosisInput").val() });
-       } 
+       if( suggestions.includes( $("#diagnosisInput").val().toUpperCase() ) ){
+           diag = $("#diagnosisInput").val().toUpperCase();
+           getLocation();
+       }
        else{
-           
+           console.log("nope");
        }
     });
 });
