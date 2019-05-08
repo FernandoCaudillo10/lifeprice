@@ -16,8 +16,8 @@
     <h1>Log In</h1>
     <div class="menu">
         <form class="signinArea" action="includesphp/login.php" method="post">
-          <input type="text" name="email" placeholder="enter username"/> <br/><br/>
-          <input type="password" name="password" placeholder="enter password" /><br/><br/>
+          Username:<input type="text" name="email" placeholder="enter username"/> <br/><br/>
+          Password:<input type="password" name="password" placeholder="enter password" /><br/><br/>
           <button class="sub" name="signIn">Sign in</button>
         </form>
         
@@ -42,11 +42,6 @@
                     -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 181, 204, 1);
                     -moz-box-shadow: 0px 5px 40px -10px rgba(0, 181, 204, 1);
                     transition: all 0.4s ease 0s;
-                }
-                input{
-                    border-style:solid;
-                    border-radius:20px;
-                    border:blue;
                 }
         </style>
     </body>

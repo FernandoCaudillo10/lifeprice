@@ -8,7 +8,7 @@
     <body>
         <header>
             <div id="pageTitle">
-                <a href="/" class="removeLinkDecor"><h1>LifePrice</h1></a>
+                <a href="../index.html" class="removeLinkDecor"><h1>LifePrice</h1></a>
             </div>
         
             <div id="pageMenu">
