@@ -1,4 +1,5 @@
 let city = "";
+let diag = "jjhuhbygvtfcrdxrx";
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -26,7 +27,7 @@ function showPosition(position) {
                     type:"GET",
                     url:"../diagnosis/api/getDiagnosis.php",
                     dataType:"json",
-                    data:{ "city": "Salinas", "diagnosis": "SEIZURE" },
+                    data:{ "city": "Salinas", "diagnosis": diag },
                     success: function (data,status){
                         console.log("hello");
                         console.log(data);
