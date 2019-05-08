@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../getDbconnect.php";
 if(isset($_POST["signIn"])){
     $conn = getDataBaseConnection("lifePriceData");
@@ -8,7 +9,7 @@ if(isset($_POST["signIn"])){
         header("Location: ../index.php?error=emptyfields");
         exit();
     }
-    session_start();
+    
         $options = [
     'cost' => 11,
     //'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
@@ -22,12 +23,15 @@ if(isset($_POST["signIn"])){
     $stmt = $conn->prepare($sql);
     $stmt->execute(array (":username" => $username));
     $record = $stmt->fetch();
-    
     $isAuthenticated = password_verify($password, $record["password"]);
 
+
+    $use = json_encode($record);
+    
+    $someArray = json_decode($use, true);
     
     if($isAuthenticated){
-        $_SESSION['username'] = $record['username'];
+        $_SESSION['username'] = $someArray[1];
         header("Location: ../members.php?succezs=logged");
         exit();
     }

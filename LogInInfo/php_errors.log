@@ -1,0 +1,22 @@
+[08-May-2019 14:21:15 UTC] PHP Fatal error:  Call to undefined method PDOStatement::get_result() in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php on line 26
+[08-May-2019 14:21:15 UTC] PHP Stack trace:
+[08-May-2019 14:21:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:0
+[08-May-2019 14:22:20 UTC] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php on line 28
+[08-May-2019 14:22:20 UTC] PHP Stack trace:
+[08-May-2019 14:22:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:0
+[08-May-2019 14:30:23 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php on line 31
+[08-May-2019 14:30:23 UTC] PHP Stack trace:
+[08-May-2019 14:30:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:0
+[08-May-2019 14:30:23 UTC] PHP   2. json_decode() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:31
+[08-May-2019 14:33:14 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php on line 31
+[08-May-2019 14:33:14 UTC] PHP Stack trace:
+[08-May-2019 14:33:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:0
+[08-May-2019 14:33:14 UTC] PHP   2. json_decode() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:31
+[08-May-2019 14:35:26 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php on line 31
+[08-May-2019 14:35:26 UTC] PHP Stack trace:
+[08-May-2019 14:35:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:0
+[08-May-2019 14:35:26 UTC] PHP   2. json_decode() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:31
+[08-May-2019 14:35:48 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php on line 31
+[08-May-2019 14:35:48 UTC] PHP Stack trace:
+[08-May-2019 14:35:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:0
+[08-May-2019 14:35:48 UTC] PHP   2. json_decode() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/login.php:31
