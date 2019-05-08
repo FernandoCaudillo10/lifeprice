@@ -13,6 +13,8 @@
      
     <form id="frm1">
       Enter company name: <input type="text" id = "company" name="company" value=""> 
+      <br><br>
+      Enter diagnosis: <input type="text" id = "diagnosis" name="diagnosis" value=""> 
       <input type="button" onclick="func2()" value="Submit">
     </form> 
        
@@ -20,6 +22,7 @@
         
     </div>
        
+        <button id="logout" onclick="window.location.href = '../logout/logout.php';" type="button">logout</button>
     <footer class="footer">
         <div>LifePrice &copy; 2019</div>
         <div>F. Caudillo | C. Aldrete | G. Cerna | A. Gonzalez</div>
@@ -54,6 +57,7 @@
                       func();
                   }
                  
+                 func3();
                 },
                 error: function(err) {
                     console.log("Houston, we have a problem!")
@@ -63,6 +67,25 @@
             });
     }
    
+    function func3() {
+    //console.log($('#company').val());
+          $.ajax({
+                type:"GET",
+                url: "info3.php",
+                dataType: "json",
+                data: {"company" : $('#company').val(),
+                       "diagnosis" : $('#diagnosis').val()
+                },
+                success: function(data, status) {
+                    console.log(data);
+                },
+                error: function(err) {
+                    console.log("Houston, we have a problem!")
+                    console.log(arguments);
+                },
+         
+            });
+    }
     
     </script>
 </html>
