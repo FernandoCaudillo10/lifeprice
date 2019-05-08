@@ -52,7 +52,7 @@ function showPosition(position) {
                                 },
                             });
                         }, 10);
-                map.setZoom(11);
+                map.setZoom(10.5);
                 var marker = new google.maps.Marker({
                     position: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)} ,
                     map: map,
