@@ -5,5 +5,4 @@ if(isset($_POST["logOut"])){
     session_destroy();
     header("Location: ../index.php");
 }
-
 ?>
