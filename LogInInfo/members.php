@@ -1,3 +1,6 @@
+<?php
+include "index.html";
+?>
 <!DOCTYPE html>
 <html>
     hello welvome to the dark side
