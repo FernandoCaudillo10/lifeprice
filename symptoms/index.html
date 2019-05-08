@@ -2,9 +2,8 @@
 <html>
     <head>
         <title>LifePrice</title>
-        <link rel="stylesheet" href="../static/symptoms.css" type="text/css" />
-
     </head>
+    
     <body>
         <header>
             <div id="pageTitle">
@@ -24,16 +23,27 @@
                 <input id="symptomsInput" class="inputStyle autocompleteInput" type="text" name="symptoms" placeholder="Enter Symptom"/>
                 <button id="symptomsSubmit" class="inputStyle autocompleteSubmit" type="button">Add Symptom</button>
             </div>
-            <div id="demo">
-                
-            </div>
+            <div id="symptomsMap"></div>
         </main>
         <footer class="footer">
             <div>LifePrice &copy; 2019</div>
             <div>F. Caudillo | C. Aldrete | G. Cerna | A. Gonzalez</div>
         </footer>
     </body>
+    <style>
+        #symptomsMap {
+          margin-top: 5em;
+          height: 25em;
+          width: 100%;
+        }
+    </style>
+    <script src="https://sandbox-authservice.priaid.ch/js/hmac-md5.js"></script>                        
+    <script src="https://sandbox-authservice.priaid.ch/js/enc-base64-min.js"></script>
+ 
+    <link rel="stylesheet" href="../static/symptoms.css" type="text/css" />
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script type="text/javascript" src="../js/symptoms.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK6FgtutsSg1mD4qiwNsSYxWzP_C-XQbg&callback=getLocation"
+    async defer></script>
 </html>
