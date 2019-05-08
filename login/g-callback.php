@@ -1,7 +1,7 @@
 <?php
     require_once "config.php";
     
-    
+    include "../doctorUpdate/getDB.php";
     
     if(isset($_SESSION['access_token']))
         $gClient->SetAccessToken($_SESSION['access_token']);
@@ -10,7 +10,7 @@
         $_SESSION['access_token'] = $token;
     }else{
         //relocate
-        header('Location: login/login.php'); 
+        header('Location: login.php'); 
         exit();
 
     }
@@ -22,15 +22,22 @@
     
    // echo"<pre>"; can be pushed to data base
     //var_dump($userData);
-    $_SESSION['id'] = $userData['id'];
+  /*  $_SESSION['id'] = $userData['id'];
     $_SESSION['email'] = $userData['email'];
-    $_SESSION['gender'] = $userData['gender'];
-    $_SESSION['picture'] = $userData['picture'];
     $_SESSION['familyName'] = $userData['familyName'];
     $_SESSION['givenName'] = $userData['givenName'];
-     
+    
+    $name = $_SESSION['givenName'].' '.$_SESSION['familyName'];
+    $conn = getConnection('LifePriceDb');
+    $email =  $_SESSION['email'];
+    $sql ="INSERT INTO doctors (name, email)" .
+    "VALUES (:name, :email)";
     //relocate
-    header('Location: index.html'); 
+    $stmt = $conn->prepare($sql);
+    $stmt->execute( array (":name" => $name,":email" => $email));*/
+    
+
+    header('Location: ../doctorUpdate/company.php'); 
     exit();
 
 ?>
