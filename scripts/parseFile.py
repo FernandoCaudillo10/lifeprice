@@ -16,8 +16,9 @@ def main():
 		f = open("data_CA.txt", "w+")
 
 		used = 0;
-		diag_id_set = set()	
-		
+		diagToFac = set()	
+		facility_set = set()
+
 		for row in readCSV:
 				used+=2;
 				info = row[0].split()
@@ -34,14 +35,16 @@ def main():
 					region = row[7]
 					cost = row[10]
 
-					
+					temp = provider+" "+region		
 					if "CA" in region:
-						f.write('INSERT INTO diagnosisToFacility VALUES("'+provider+'", '+diag_id+');\n')
-						f.write('INSERT INTO facility_table VALUES("'+provider+'", "'+addr+'", "'+region+'", '+cost+');\n')
+						f.write('INSERT INTO diagnosisToFacility VALUES("'+provider+'", "'+diag+'", '+cost+');\n')
+						if temp not in facility_set:
+							f.write('INSERT INTO facility_table VALUES("'+provider+'", "'+addr+'", "'+region+'");\n')
+							facility_set.add(temp)
 
-					diag_id_set.add('"'+diag+'", '+diag_id)
+						diagToFac.add('"'+provider +'", "'+diag+'"')
 		
-		for s in diag_id_set:
+		for s in diagToFac:
 			f.write("INSERT INTO diagnosis_table VALUES("+s+");\n")		
 			used+=1;
 				
