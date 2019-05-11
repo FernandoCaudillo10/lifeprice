@@ -1,12 +1,13 @@
 <?php
 session_start();
-echo $_SESSION['username'];
+//echo $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>LifePrice</title>
         <link rel="stylesheet" href="../static/stylesLog.css" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         
     </head>
     <body>
@@ -27,6 +28,29 @@ echo $_SESSION['username'];
             
         </header>
         <main>
+            <div id="symtoms"></div>
+            
+            <script type="text/javascript">
+                $(document).ready(()=>{
+                    $.ajax({
+                        type:"GET",
+                        url:"includesphp/getS.php",
+                        dataType:"json",
+                        data:{},
+                        success:function(data) {
+                            //let a = data[0];
+                            console.log(data);
+                            for(let i =0;i<data.length;i++){
+                                $("#symtoms").append(data[i]['symptom'] +"<br/>");    
+                            }
+                            
+                        }
+                        
+                    })
+                })
+                
+            </script>
+            
             <style type="text/css">
                 .doc{
                     color: #FFF !important;
@@ -45,6 +69,7 @@ echo $_SESSION['username'];
                 }
             </style>
         </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <footer class="footer">
             <div>LifePrice &copy; 2019</div>
             <div>F. Caudillo | C. Aldrete | G. Cerna | A. Gonzalez</div>

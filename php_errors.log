@@ -106,3 +106,9 @@ Stack trace:
 #1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
 #2 {main}
   thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
+[11-May-2019 02:07:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'LifePriceDb'' in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/lifeprice/endpoints/getAllSymptoms.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/lifeprice/endpoints/dbConn.php on line 16
