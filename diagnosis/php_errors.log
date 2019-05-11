@@ -386,3 +386,39 @@ Stack trace:
 #0 /home/ubuntu/workspace/lifeprice/diagnosis/api/storeUserSympt.php(13): PDOStatement->fetchAll(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/lifeprice/diagnosis/api/storeUserSympt.php on line 13
+[11-May-2019 03:13:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', NULL, '')
+#1 /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/endpoints/dbConn.php on line 16
+[11-May-2019 03:13:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', NULL, '')
+#1 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(4): getConnection('LifePriceDb')
+#2 {main}
+  thrown in /home/ubuntu/workspace/endpoints/dbConn.php on line 16
+[11-May-2019 03:14:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', NULL, '')
+#1 /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/endpoints/dbConn.php on line 16
+[11-May-2019 03:14:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', NULL, '')
+#1 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(4): getConnection('LifePriceDb')
+#2 {main}
+  thrown in /home/ubuntu/workspace/endpoints/dbConn.php on line 16
+[11-May-2019 03:15:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', NULL, '')
+#1 /home/ubuntu/workspace/diagnosis/api/getAllDiagnosis.php(4): getConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/endpoints/dbConn.php on line 16
+[11-May-2019 03:15:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/endpoints/dbConn.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/endpoints/dbConn.php(16): PDO->__construct('mysql:host=loca...', NULL, '')
+#1 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(4): getConnection('LifePriceDb')
+#2 {main}
+  thrown in /home/ubuntu/workspace/endpoints/dbConn.php on line 16

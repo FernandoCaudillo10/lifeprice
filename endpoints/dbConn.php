@@ -1,8 +1,8 @@
 <?php
-    function getConnection($dbname = 'lifePriceData'){
+    function getConnection($dbname = 'lifePriceDb'){
         $host = "localhost";
-        $user = "root";
-        $pswrd = "";
+        $username = "root";
+        $password = "";
         
         if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
             $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -13,7 +13,7 @@
         } 
         
         //creates connection
-        $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pswrd);
+        $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
         
         //displays errors
         $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -1,7 +1,7 @@
 <?php
-    require_once('../dbConnec.php');
+    require_once('../../endpoints/dbConn.php');
     
-    $conn = getConnection();
+    $conn = getConnection("LifePriceDb");
     $city = $_GET["city"];
     $diagnosis = $_GET["diagnosis"];
     
