@@ -40,7 +40,7 @@ if(isset($_POST["signDel"])){
         exit();
     }
     else{
-        header("Location: ./LogInInfo/deleteAccount.php?error=noAcc");
+        header("Location: ./index.php?error=noAcc");
         session_destroy();
         exit();
     }
