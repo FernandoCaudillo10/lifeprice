@@ -139,3 +139,24 @@ Stack trace:
 [08-May-2019 20:35:43 UTC] PHP Stack trace:
 [08-May-2019 20:35:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/del.php:0
 [08-May-2019 20:35:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/del.php:35
+[11-May-2019 02:46:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:46:08 UTC] PHP Stack trace:
+[11-May-2019 02:46:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
+[11-May-2019 02:46:18 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:46:18 UTC] PHP Stack trace:
+[11-May-2019 02:46:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
+[11-May-2019 02:46:58 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:46:58 UTC] PHP Stack trace:
+[11-May-2019 02:46:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
+[11-May-2019 02:47:00 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:47:00 UTC] PHP Stack trace:
+[11-May-2019 02:47:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
+[11-May-2019 02:47:38 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:47:38 UTC] PHP Stack trace:
+[11-May-2019 02:47:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
+[11-May-2019 02:47:58 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:47:58 UTC] PHP Stack trace:
+[11-May-2019 02:47:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
+[11-May-2019 02:48:07 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php on line 10
+[11-May-2019 02:48:07 UTC] PHP Stack trace:
+[11-May-2019 02:48:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/lifeprice/LogInInfo/includesphp/getS.php:0
