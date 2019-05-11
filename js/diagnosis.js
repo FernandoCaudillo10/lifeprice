@@ -2,6 +2,7 @@ let suggestions = [];
 
 
 $(document).ready(() =>{
+    
     $.ajax({
         type:"GET",
         url:"../diagnosis/api/getAllDiagnosis.php",

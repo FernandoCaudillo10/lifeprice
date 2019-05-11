@@ -1,6 +1,5 @@
 import csv
 
-
 def convertDiag(info):
 	temp = ""
 
@@ -22,9 +21,8 @@ def main():
 		for row in readCSV:
 				used+=2;
 				info = row[0].split()
+				#print("1: ", info)
 				info.pop(1)
-				info.pop(-1)
-				info.pop(-1)
 				if len(info) is not 0:
 					diag_id = info[0]
 					info.pop(0) 
@@ -37,15 +35,16 @@ def main():
 
 					temp = provider+" "+region		
 					if "CA" in region:
+						#print("r: ", row,"i: ", info, "d:", diag, "p: ", provider, "a: ", addr, "r: ", region,"c: ", cost);
 						f.write('INSERT INTO diagnosisToFacility VALUES("'+provider+'", "'+diag+'", '+cost+');\n')
 						if temp not in facility_set:
-							f.write('INSERT INTO facility_table VALUES("'+provider+'", "'+addr+'", "'+region+'");\n')
+							#f.write('INSERT INTO facility_table VALUES("'+provider+'", "'+addr+'", "'+region+'");\n')
 							facility_set.add(temp)
 
-						diagToFac.add('"'+provider +'", "'+diag+'"')
+						diagToFac.add('"'+diag +'", "'+diag_id+'"')
 		
 		for s in diagToFac:
-			f.write("INSERT INTO diagnosis_table VALUES("+s+");\n")		
+			#f.write("INSERT INTO diagnosis_table VALUES("+s+");\n")		
 			used+=1;
 				
 	f.close()

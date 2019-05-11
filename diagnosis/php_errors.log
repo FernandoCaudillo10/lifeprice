@@ -278,3 +278,27 @@ Stack trace:
 [08-May-2019 22:52:55 UTC] PHP Fatal error:  require_once(): Failed opening required '../../enpoints/dbConn.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 2
 [08-May-2019 22:52:55 UTC] PHP Stack trace:
 [08-May-2019 22:52:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:0
+[10-May-2019 23:47:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'diagnosis' in field list is ambiguous' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 16
+[10-May-2019 23:47:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'diagnosis' in field list is ambiguous' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 16
+[10-May-2019 23:48:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'diagnosis' in where clause is ambiguous' in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/diagnosis/api/getDiagnosis.php on line 16
+[11-May-2019 01:47:48 UTC] PHP Warning:  include(dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/diagnosis/api/storeUserSympt.php on line 5
+[11-May-2019 01:47:48 UTC] PHP Stack trace:
+[11-May-2019 01:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/storeUserSympt.php:0
+[11-May-2019 01:47:48 UTC] PHP Warning:  include(): Failed opening 'dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/diagnosis/api/storeUserSympt.php on line 5
+[11-May-2019 01:47:48 UTC] PHP Stack trace:
+[11-May-2019 01:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/storeUserSympt.php:0
+[11-May-2019 01:47:48 UTC] PHP Fatal error:  Call to undefined function getConnection() in /home/ubuntu/workspace/diagnosis/api/storeUserSympt.php on line 6
+[11-May-2019 01:47:48 UTC] PHP Stack trace:
+[11-May-2019 01:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/diagnosis/api/storeUserSympt.php:0

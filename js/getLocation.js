@@ -23,19 +23,40 @@ function showPosition(position) {
         if (status === 'OK') {
             if (results[0]) {
                 console.log(results);
-                city = results[0].address_components[3].long_name;
+                let arrAddress = results;
+                let city ='';
+                
+                // iterate through address_component array
+                $.each(arrAddress, function (i, address_component) {
+                    if (address_component.types[0] == "locality"){
+                        console.log(address_component.address_components[0].long_name);
+                        city = address_component.address_components[0].long_name;
+                    }
+                    //return false; // break the loop   
+                });
                 console.log(city);
                 console.log(diag);
                 $.ajax({
                     type:"GET",
                     url:"../diagnosis/api/getDiagnosis.php",
                     dataType:"json",
-                    data:{ "city": "Salinas", "diagnosis": diag },
+                    data:{ "city": city, "diagnosis": diag },
                     success: function (data,status){
-                        console.log("hello");
-                        console.log(data);
-                        let i=0;
+                        let sData = [];
                         for(let elem of data){
+                            let isIn = false;
+                            for(let selem of sData){
+                                if(elem.diagnosis == selem.diagnosis && selem.facility == elem.facility){
+                                    isIn = true;
+                                }
+                            }
+                            if(!isIn){
+                                sData.push(elem);
+                            }
+                        }
+                        console.log(sData);
+                        let i=0;
+                        for(let elem of sData){
                             console.log(elem.address);
                             geocoder.geocode({'address': elem.address + ", " + city}, function(results, status) {
                                 if (status === 'OK') {
@@ -55,7 +76,10 @@ function showPosition(position) {
                                 }
                             });
                             i++;
-                            if(i>9) break;
+                            if(i>=10){
+                                console.log("broke");
+                                break;
+                            }
                         }
                     },
                     error: function(error){

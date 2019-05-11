@@ -54,9 +54,24 @@ $(document).ready(() =>{
        else{
            console.log("nope");
        }
+       storeSymptom();
     });
 });
+function storeSymptom() {
+    let str = $("#symptomsInput").val().toUpperCase();
+    console.log("stuff");
+    $.ajax({
+        type:"GET",
+        url:"../diagnosis/api/storeUserSympt.php",
+        data:{
+            url:str
+        },
+        success:function(data) {
+            console.log("stored");
+        }
+    })
 
+}
 function createBubble(value){
     $("#bubbleContainer").append("<div class='bubble' id='"+value+"'>"+value+" <strong class='bRed'>X</strong></div>").click(() => {
         $("#"+value).remove();
@@ -179,19 +194,45 @@ function showPosition(position) {
         center: {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)},
         zoom: 15
       });
-      geocoder.geocode({'location': {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}}, function(results, status) {
+    geocoder.geocode({'location': {lat: parseFloat(position.coords.latitude), lng: parseFloat(position.coords.longitude)}}, function(results, status) {
         if (status === 'OK') {
             if (results[0]) {
-                city = results[0].address_components[2].long_name;
+                console.log(results);
+                let arrAddress = results;
+                let city ='';
+                let diag = "signs & symptoms";
+                
+                // iterate through address_component array
+                $.each(arrAddress, function (i, address_component) {
+                    if (address_component.types[0] == "locality"){
+                        console.log(address_component.address_components[0].long_name);
+                        city = address_component.address_components[0].long_name;
+                    }
+                    //return false; // break the loop   
+                });
+                console.log(city);
+                console.log(diag);
                 $.ajax({
                     type:"GET",
                     url:"../diagnosis/api/getDiagnosis.php",
                     dataType:"json",
-                    data:{ "city": "Salinas", "diagnosis": "SEIZURE" },
+                    data:{ "city": city, "diagnosis": diag },
                     success: function (data,status){
-                        console.log("hello");
-                        console.log(data);
-                        data.forEach(function(elem){
+                        let sData = [];
+                        for(let elem of data){
+                            let isIn = false;
+                            for(let selem of sData){
+                                if(elem.diagnosis == selem.diagnosis && selem.facility == elem.facility){
+                                    isIn = true;
+                                }
+                            }
+                            if(!isIn){
+                                sData.push(elem);
+                            }
+                        }
+                        console.log(sData);
+                        let i=0;
+                        for(let elem of sData){
                             console.log(elem.address);
                             geocoder.geocode({'address': elem.address + ", " + city}, function(results, status) {
                                 if (status === 'OK') {
@@ -203,15 +244,19 @@ function showPosition(position) {
                                     });
                                     google.maps.event.addListener(marker, 'click', function() {
                                       infowindow.setContent('<div><strong>Facility:</strong> ' + elem.facility + '<br>' +
-                                        '<strong>Address:</strong> ' + elem.address + '<br> <strong>Cost:</strong> $' + elem.cost + '</div>');
+                                        '<strong>Address:</strong> ' + elem.address + '<br> <strong>Cost:</strong> $' + elem.cost/10 + '</div>');
                                       infowindow.open(map, this);
                                     });
                                 } else {
                                     alert('Geocode was not successful for the following reason: ' + status);
                                 }
                             });
-                            
-                        });
+                            i++;
+                            if(i>=10){
+                                console.log("broke");
+                                break;
+                            }
+                        }
                     },
                     error: function(error){
                         console.log(error);
