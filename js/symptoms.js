@@ -64,7 +64,7 @@ function storeSymptom() {
         type:"GET",
         url:"../diagnosis/api/storeUserSympt.php",
         data:{
-            url:str
+            sy:str
         },
         success:function(data) {
             console.log("stored");
