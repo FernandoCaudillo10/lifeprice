@@ -6,7 +6,7 @@
     $diagnosis = $_GET["diagnosis"];
     
     $sql = 'SELECT df.diagnosis, facility, address, cost, region 
-            FROM diagnosisToFacility as df 
+            FROM diagnosistofacility as df 
             INNER JOIN diagnosis_table as dt 
             ON df.diagnosis = dt.diagnosis 
             INNER JOIN facility_table as ft ON ft.name = df.facility 
